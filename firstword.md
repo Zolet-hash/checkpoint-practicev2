@@ -1,36 +1,45 @@
-firstword
-Instructions
+## firstword
 
-Write a function that takes a string and return a string containing its first word, followed by a newline ('\n').
+### Instructions
 
-    A word is a sequence of characters delimited by spaces or by the start/end of the argument.
+Write a function that takes a string and return a string containing its first word, followed by a newline (`'\n'`).
 
-Expected Function
+- A word is a sequence of characters delimited by spaces or by the start/end of the argument.
 
+### Expected Function
+
+```go
 func FirstWord(s string) string {
     // ...
 }
+```
 
-Usage
+### Usage
 
 Here is a possible way to test your function:
 
+```go
 package main
 
 import (
     "fmt"
+
+    "piscine"
 )
 
 func main() {
-    fmt.Print(FirstWord("hello there"))
-    fmt.Print(FirstWord(""))
-    fmt.Print(FirstWord("hello   .........  bye"))
+    fmt.Print(piscine.FirstWord("hello there"))
+    fmt.Print(piscine.FirstWord(""))
+    fmt.Print(piscine.FirstWord("hello   .........  bye"))
 }
+```
 
 And its output:
 
+```console
 $ go run .
 hello
 
 hello
 $
+```

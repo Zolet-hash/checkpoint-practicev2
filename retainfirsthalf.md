@@ -1,22 +1,26 @@
-retainfirsthalf
-Instructions
+## retainfirsthalf
 
-Write a function called RetainFirstHalf() that takes a string as an argument and returns the first half of this string.
+### Instructions
 
-    If the length of the string is odd, round it down.
-    If the string is empty, return an empty string.
-    If the string length is equal to one, return the string.
+Write a function called `RetainFirstHalf()` that takes a `string` as an argument and returns the first half of this `string`.
 
-Expected function
+- If the length of the `string` is odd, round it down.
+- If the `string` is empty, return an empty string.
+- If the `string` length is equal to one, return the string.
 
+### Expected function
+
+```go
 func RetainFirstHalf(str string) string {
 
 }
+```
 
-Usage
+### Usage
 
 Here is a possible program to test your function:
 
+```go
 package main
 
 import (
@@ -30,11 +34,14 @@ func main() {
 	fmt.Println(piscine.RetainFirstHalf(""))
 	fmt.Println(piscine.RetainFirstHalf("Hello World"))
 }
+```
 
 And its output:
 
+```console
 $ go run . | cat -e
 This is the 1st half$
 A$
 $
 Hello$
+```
