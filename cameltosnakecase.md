@@ -1,33 +1,37 @@
-cameltosnakecase
-Instructions
+## cameltosnakecase
 
-Write a function that converts a string from camelCase to snake_case.
+### Instructions
 
-    If the string is empty, return an empty string.
-    If the string is not camelCase, return the string unchanged.
-    If the string is camelCase, return the snake_case version of the string.
+Write a function that converts a `string` from `camelCase` to `snake_case`.
 
-For this exercise you need to know that camelCase has two different writing alternatives that will be accepted:
+- If the `string` is empty, return an empty `string`.
+- If the `string` is not `camelCase`, return the `string` unchanged.
+- If the `string` is `camelCase`, return the `snake_case` version of the `string`.
 
-    lowerCamelCase
-    UpperCamelCase
+For this exercise you need to know that `camelCase` has two different writing alternatives that will be accepted:
 
-Rules for writing in camelCase:
+- lowerCamelCase
+- UpperCamelCase
 
-    The word does not end on a capitalized letter (CamelCasE).
-    No two capitalized letters shall follow directly each other (CamelCAse).
-    Numbers or punctuation are not allowed in the word anywhere (camelCase1).
+Rules for writing in `camelCase`:
 
-Expected function
+- The word does not end on a capitalized letter (CamelCasE).
+- No two capitalized letters shall follow directly each other (CamelCAse).
+- Numbers or punctuation are not allowed in the word anywhere (camelCase1).
 
+### Expected function
+
+```go
 func CamelToSnakeCase(s string) string{
 
 }
+```
 
-Usage
+### Usage
 
 Here is a possible program to test your function:
 
+```go
 package main
 
 import (
@@ -42,9 +46,11 @@ func main() {
 	fmt.Println(CamelToSnakeCase("camelToSnakeCase"))
 	fmt.Println(CamelToSnakeCase("hey2"))
 }
+```
 
 And its output:
 
+```console
 $ go run .
 Hello_World
 hello_World
@@ -52,3 +58,4 @@ camel_Case
 CAMELtoSnackCASE
 camel_To_Snake_Case
 hey2
+```
