@@ -25,5 +25,5 @@ func LastWord(s string) string {
 	for i >= 0 && s[i] != ' ' {
 		i--
 	}
-	return s[i+1 : end+1] + "\n"
+	return s[i+1:end+1] + "\n"
 }

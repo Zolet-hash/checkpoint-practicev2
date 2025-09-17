@@ -13,7 +13,7 @@ func main() {
 
 func CountChar(str string, c rune) int {
 	count := 0
-    if len(str) == 0 {
+	if len(str) == 0 {
 		return 0
 	}
 	for _, r := range str {

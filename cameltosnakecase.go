@@ -25,7 +25,7 @@ func CamelToSnakeCase(s string) string {
 			return s
 		}
 		if i > 0 && r >= 'A' && r <= 'Z' {
-			prev := rune(i-1)
+			prev := rune(i - 1)
 
 			if prev >= 'A' && prev <= 'Z' {
 				return s
