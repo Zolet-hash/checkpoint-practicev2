@@ -16,7 +16,7 @@ func HashCode(dec string) string {
 	var hashedstr string
 
 	for _, r := range dec {
-		hashedval := (int(r) + length) %127
+		hashedval := (int(r) + length) % 127
 
 		if hashedval < 32 {
 			hashedval += 33
