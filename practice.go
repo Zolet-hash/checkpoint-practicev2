@@ -19,13 +19,11 @@ func main() {
 	}
 
 	for _, r := range original {
-		if r == oldChar[0] {
+		if == oldChar[0] {
 			z01.PrintRune(newChar[0])
 		} else {
 			z01.PrintRune(r)
 		}
 	}
 	z01.PrintRune('\n')
-
 }
-
