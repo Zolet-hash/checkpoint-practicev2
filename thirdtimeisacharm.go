@@ -12,10 +12,11 @@ func main() {
 }
 
 func ThirdTimeIsACharm(str string) string {
+	length := len([]rune(str))
 	runes := []rune(str)
 	var thirdChar []rune
 
-	for i := 2; i < len(runes); i += 3 {
+	for i := 2; i < length; i += 3 {
 		thirdChar = append(thirdChar, runes[i])
 	}
 	return string(thirdChar) + "\n"
