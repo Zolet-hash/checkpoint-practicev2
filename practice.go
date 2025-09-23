@@ -6,23 +6,24 @@ import (
 )
 
 func main() {
-	if len(os.Args) != 4 {
+	if len(os.Args) != 2 {
 		return
 	}
 
-	original := []rune(os.Args[1])
-	oldChar := []rune(os.Args[2])
-	newChar := []rune(os.Args[3])
+	input := os.Args[1]
+	inword := false
+	firstword := true
 
-	if len(oldChar) != 1 || len(newChar) != 1 {
-		return
-	}
-
-	for _, r := range original {
-		if == oldChar[0] {
-			z01.PrintRune(newChar[0])
+	for _, r := range input {
+		if r == ' ' || r == '\t' {
+			inword = false
 		} else {
+			if !inword && !firstword {
+				z01.PrintRune(' ')
+			}
 			z01.PrintRune(r)
+			inword = true
+			firstword = false
 		}
 	}
 	z01.PrintRune('\n')
