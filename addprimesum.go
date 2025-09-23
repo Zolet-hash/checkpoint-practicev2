@@ -18,9 +18,8 @@ func printDigit(n int) {
 
 	var digits []rune
 	for n > 0 {
-		digits = append(digits, rune('0' + (n%10)))
+		digits = append(digits, rune('0'+(n%10)))
 		n /= 10
 	}
 
-	
 }

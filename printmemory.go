@@ -11,17 +11,17 @@ func PrintMemory(arr [10]byte) {
 		hexEq := convertHex(int(byt))
 		withoutanewline(hexEq)
 
-		if (i+1)%4 == 0 && i!= 0|| i == len(arr)-1{
+		if (i+1)%4 == 0 && i != 0 || i == len(arr)-1 {
 			z01.PrintRune('\n')
 		} else {
 			z01.PrintRune(' ')
 		}
 
 	}
-	for _,ch := range arr{
-		if ch >= 33 && ch <= 127{
+	for _, ch := range arr {
+		if ch >= 33 && ch <= 127 {
 			z01.PrintRune(rune(ch))
-		}else {
+		} else {
 			z01.PrintRune('.')
 		}
 	}
@@ -29,7 +29,7 @@ func PrintMemory(arr [10]byte) {
 }
 
 func convertHex(nb int) string {
-	if nb == 0{
+	if nb == 0 {
 		return "00"
 	}
 	hexdigits := "0123456789abcdef"
