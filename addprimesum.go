@@ -1,25 +1,33 @@
 package main
 
 import (
-	"github.com/01-edu/z01"
+	"fmt"
+	"os"
+	"strconv"
 )
 
-func printStr(s string) {
-	for _, r := range s {
-		z01.PrintRune(r)
-	}
-}
-
-func printDigit(n int) {
-	if n == 0 {
-		z01.PrintRune('0')
+func main() {
+	if len(os.Args) != 2 {
+		fmt.Println(0)
 		return
 	}
-
-	var digits []rune
-	for n > 0 {
-		digits = append(digits, rune('0'+(n%10)))
-		n /= 10
+	n, _ := strconv.Atoi(os.Args[1])
+	if n <= 0 {
+		fmt.Println(0)
+		return
 	}
-
+	sum := 0
+	for i := 2; i <= n; i++ {
+		p := true
+		for j := 2; j*j <= i; j++ {
+			if i%j == 0 {
+				p = false
+				break
+			}
+		}
+		if p {
+			sum += i
+		}
+	}
+	fmt.Println(sum)
 }

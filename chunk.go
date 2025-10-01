@@ -14,17 +14,17 @@ func main() {
 
 func Chunk(slice []int, size int) {
 	if size == 0 {
-		fmt.Println()
+		fmt.Println() //print empty slice
 		return
 	}
 
-	var result [][]int
-	for i := 0; i < len(slice); i += size {
-		end := i + size
-		if end > len(slice) {
-			end = len(slice)
+	var result [][]int //two-dimensional slice to hold chunks
+	for i := 0; i < len(slice); i += size { //iterate in steps of 'size'
+		end := i + size //calculate end index
+		if end > len(slice) { //a
+			end = len(slice) //adjust end if it exceeds slice length
 		}
-		result = append(result, slice[i:end])
+		result = append(result, slice[i:end]) 
 	}
 	fmt.Println(result)
 }
